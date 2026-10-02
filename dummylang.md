@@ -17,6 +17,11 @@ Operators
     -, *, / : performs calculations between numerical types (automatic conversion to the stronger type if necessary) 
     OR, AND : compares booleans
     ^ : composes functions
+        f1 ^ f2 means evaluate f2 first, then pass its return value into f1.
+        if any step in the composition requires multiple arguments, insert fixed values like:
+            f1 ^ (f2, x)
+
+    means: evaluate f2, then call f1 using f2's result together with x as its arguments.
 
 Variables
     defined using var.{type} {name} = {initial value};
@@ -65,7 +70,6 @@ Object Functionality
         dbool fn.edit(
             {body}
         )
-
 
 Input/Output
     din {file}: inputs file
