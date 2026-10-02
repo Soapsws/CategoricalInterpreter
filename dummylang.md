@@ -1,4 +1,4 @@
-Data Types / Objects
+# Data Types / Objects
     // using 'd' as prefix to not be confused with Haskell primitive types
     dint
     dfloat
@@ -9,7 +9,7 @@ Data Types / Objects
     Map
     Function
 
-Operators
+# Operators
     = : assignment operator
     == : comparison operator, compares by value
     + : performs calculations between numerical types (automatic conversion to the stronger type if necessary)
@@ -25,15 +25,15 @@ Operators
 
     means: evaluate f2, then call f1 using f2's result together with x as its arguments.
 
-Variables
+# Variables
     defined using var.{type} {name} = {initial value};
     for example, var.dint my_integer = 5;
 
-Special Lexical Tokens
+# Special Lexical Tokens
     ; : end of line 
     ( ) : priority delimiter
 
-Initialization Syntax for Objects
+# Initialization Syntax for Objects
     // default values are initialized to 0 (for dint, dfloat), false (for dbool), "" (for dstr), Do Nothing (for Function), Matrix,
     // Set, Map are composed of primitive types
     Matrix: var.Matrix {name} = ({primitive_type}, {length}, {width}) | Fixed Size
@@ -45,7 +45,7 @@ Initialization Syntax for Objects
         ( {body} ) // must include "return" keyword
     )
 
-Object Functionality
+# Object Functionality
 
     // for now, Matrices, Sets, and Maps can only contain primitive types.
     // as I further explore the composable nature of Haskell and its inspiration in category theory,
@@ -59,7 +59,7 @@ Object Functionality
         dbool s.ins({value})
         dbool s.contains({value})
         dbool s.rem({value})
-    
+
     Map : assume we have a Map m
         dbool m.ins({key}, {value}) // overwrites value if pre-existing
         dbool m.contains({key})
@@ -73,7 +73,6 @@ Object Functionality
             {body}
         )
 
-Input/Output
+# Input/Output
     din {file}: inputs file
     dout {string}: outputs value of dstr variable
-
