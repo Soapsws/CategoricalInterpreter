@@ -14,7 +14,9 @@ Operators
     == : comparison operator, compares by value
     + : performs calculations between numerical types (automatic conversion to the stronger type if necessary)
         appends strings 
-    -, *, / : performs calculations between numerical types (automatic conversion to the stronger type if necessary) 
+    * : performs calculations between numerical types (automatic conversion to the stronger type if necessary)
+        autoconcatenates strings by itself by a certain factor (commutative)
+    -, / : performs calculations between numerical types (automatic conversion to the stronger type if necessary)       
     OR, AND : compares booleans
     ^ : composes functions
         f1 ^ f2 means evaluate f2 first, then pass its return value into f1.
